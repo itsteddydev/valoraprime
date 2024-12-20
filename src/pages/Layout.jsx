@@ -1,11 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const Layout = () => {
 
@@ -17,9 +16,6 @@ const Layout = () => {
     { id: 5, name: "Ajustes", URL: "/src/assets/svg/emojis/1F4CA.svg", emoji: "⚙️" },
 
   ];
-
-
-
 
   return (
     //TODO - Cambiar el color de fondo cuando el proyecto esté más avanzado y se tenga un diseño definido
