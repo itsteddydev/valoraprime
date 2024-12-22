@@ -22,7 +22,7 @@ const Home = () => {
   const metasAlcanzadas = 70; // Porcentaje de ahorro alcanzado.
 
   return (
-    <div className="px-4 pb-6 pt-4 space-y-4">
+    <div className="px-3 space-y-4">
       <Label className="text-xl font-semibold">Funcionalidades Clave</Label>
       {/* <br className='pb-4' /> */}
       <div className="grid grid-cols-2 gap-4">
@@ -30,8 +30,8 @@ const Home = () => {
           <Link to={feature.link} key={feature.id} className="block">
             <Card key={feature.id} className="shadow-md">
               <CardHeader className="flex flex-col items-center justify-center">
-                <div className="text-4xl mb-2">{feature.icon}</div>
-                <CardTitle className="text-center text-sm font-semibold">
+                <div className="text-3xl mb-2">{feature.icon}</div>
+                <CardTitle className="text-center text-xs font-semibold">
                   {feature.title}
                 </CardTitle>
               </CardHeader>

@@ -1,47 +1,24 @@
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
-import { Navigate, Outlet } from "react-router-dom";
-import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { Label } from '@/components/ui/label';
-import React from 'react';
+import Footer from "@/shared/components/Footer";
+import Header from "@/shared/components/Header";
+import React from "react";
+import { Outlet } from "react-router-dom";
+
 
 const MainLayout = () => {
-
-  const navItems = [
-    { id: 1, name: "Inicio", emoji: "🏠", link: "/" },
-    { id: 2, name: "Dashboard", emoji: "📊", link: "/dashboard" },
-    { id: 3, name: "Registrar", emoji: "➕", link: "/registrar" },
-    { id: 4, name: "Finanzas", emoji: "💸", link: "/finanzas" },
-    { id: 5, name: "Perfil", emoji: "⚙️", link: "/perfil" },
-  ];
-
   return (
-    <div className="w-full h-screen flex flex-col">
+    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       {/* Header */}
-      <header className="drop-shadow-md border-b border-gray-200 flex items-center justify-between px-4 py-3 bg-white z-10 fixed top-0 left-0 w-full">
-        <h1 className="font-semibold text-xl">Valora Prime</h1>
-      </header>
+      <Header />
 
-      {/* Content */}
-      <div className="flex-grow pt-4 pb-4 overflow-y-auto mt-[54px] mb-[64px]">
-        <Outlet />
-      </div>
+      {/* Main Content */}
+      <main className="pb-20 pt-16 md:pt-24 md:pb-16 overflow-y-auto">
+        <div className="max-w-[1200px] mx-auto px-2">
+          <Outlet />
+        </div>
+      </main>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-10">
-        <div className="flex justify-around items-center py-2">
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className="flex flex-col items-center text-gray-700 hover:text-black"
-            >
-              <span className="text-2xl">{item.emoji}</span>
-              <span className="text-sm font-medium">{item.name}</span>
-            </a>
-          ))}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
