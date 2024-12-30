@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <>
       {/* Mobile Footer Navigation */}
-      <footer className="bg-white border-t border-gray-200 md:hidden fixed bottom-0 left-0 w-full z-10">
+      {/* <footer className="bg-white border-t border-gray-200 md:hidden fixed bottom-0 left-0 w-full z-10">
         <div className="flex justify-around items-center py-2">
           {navItemsMobile.map((item) => (
             <NavLink
@@ -29,11 +29,11 @@ const Footer = () => {
             </NavLink>
           ))}
         </div>
-      </footer>
+      </footer> */}
 
       {/* Footer for Desktop */}
-      <footer className="hidden md:block">
-        <div className="max-w-[1200px] mx-auto px-6 py-32 text-center">
+      <footer className="py-12 min-h-screen flex flex-col justify-center bg-white border-t border-gray-200">
+        <div className="max-w-[1200px] mx-auto text-center px-4">
           {/* Título */}
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Valora Prime</h2>
           <p className="text-gray-600 text-base mb-6">
@@ -41,34 +41,34 @@ const Footer = () => {
           </p>
 
           {/* Navegación */}
-          <nav className="flex justify-center gap-8 mb-6">
+          <nav className="flex justify-center gap-8 mb-6 flex-wrap">
             <NavLink
               to="/about"
-              className="text-gray-700 hover:text-black text-base"
+              className="text-gray-700 hover:text-black text-base mb-2"
             >
               About us
             </NavLink>
             <NavLink
               to="/privacy"
-              className="text-gray-700 hover:text-black text-base"
+              className="text-gray-700 hover:text-black text-base mb-2"
             >
               Privacy
             </NavLink>
             <NavLink
               to="/terms"
-              className="text-gray-700 hover:text-black text-base"
+              className="text-gray-700 hover:text-black text-base mb-2"
             >
               Terms
             </NavLink>
             <NavLink
               to="/blog"
-              className="text-gray-700 hover:text-black text-base"
+              className="text-gray-700 hover:text-black text-base mb-2"
             >
               Blog
             </NavLink>
             <NavLink
               to="/contact"
-              className="text-gray-700 hover:text-black text-base"
+              className="text-gray-700 hover:text-black text-base mb-2"
             >
               Contact
             </NavLink>
@@ -76,7 +76,7 @@ const Footer = () => {
 
           {/* Nota final */}
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} Valora Prime. © Built with ❤️? by a justcoddev.
+            © {new Date().getFullYear()} Valora Prime. Built with ❤️ by justcoddev.
           </p>
         </div>
       </footer>
