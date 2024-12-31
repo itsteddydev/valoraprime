@@ -1,16 +1,33 @@
 import Footer from "@/shared/components/Footer";
 import Header from "@/shared/components/Header";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
 
 const Layout = () => {
+
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       {/* Header */}
       <header className="fixed top-0 w-full z-10 bg-white">
         <div
-          className={`max-w-[1200px] mx-auto rounded-b-lg px-6 md:py-6 py-4 flex justify-between items-center transition-shadow 
+          className={`max-w-[1200px] mx-auto rounded-b-lg px-6 md:py-6 py-4 flex justify-between items-center transition-shadow  ${scrolled ? "shadow-md" : ""
             }`}
         >
           {/* Logo */}
