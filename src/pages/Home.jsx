@@ -8,10 +8,11 @@ const Home = () => {
       <section id="home" className="space-y-6 mb-10 min-h-screen flex flex-col justify-center">
         <div className="flex justify-center items-center">
           <p className="text-xs text-gray-500">
-            Built with ❤️ by{" "}
+            Created by{" "}
             <a
               href="https://www.instagram.com/justcoddev/"
-              className="text-blue-600 underline hover:text-blue-800"
+              className="underline underline-offset-2 hover:text-primary ml-1"
+              target='_blank'
             >
               justcoddev
             </a>
@@ -20,7 +21,7 @@ const Home = () => {
 
         <header className="text-center">
           <h1 className="text-3xl font-extrabold leading-tight text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
-            Know Your Value. Charge With Confidence.
+            Know Your Value. <br /> Charge With Confidence.
           </h1>
           <p className="mt-4 text-base text-gray-600 md:text-lg lg:mt-6">
             Master your finances with Valora Prime. Calculate your rates and manage your income effortlessly.
