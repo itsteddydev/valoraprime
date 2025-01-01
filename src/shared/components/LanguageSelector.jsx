@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
 
 const LanguageSelector = ({ onLanguageChange }) => {
   const { i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Lee el idioma desde localStorage al cargar el componente
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
+
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang); // Guarda el idioma en localStorage
     setMenuOpen(false); // Cierra el menú desplegable
     if (onLanguageChange) onLanguageChange(); // Llama al callback si está definido
   };

@@ -1,0 +1,9 @@
+{
+  "title": "Calculation Results",
+  "monthlyExpenses": "Monthly Expenses",
+  "weeklyHours": "Weekly Hours",
+  "priceWithoutAdditional": "Price Hour Without Additional",
+  "finalPriceWithAdditional": "Price Hour With Additional",
+  "totalSalaryWithoutAdditional": "Total Salary Without Additional",
+  "totalSalaryWithAdditional": "Total Salary With Additional"
+}
