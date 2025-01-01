@@ -53,7 +53,7 @@ export default function CalculatorForm() {
                 type="number"
                 value={formData.dailyHours}
                 onChange={(e) => updateFormData("dailyHours", e.target.value)}
-                placeholder={t(".weeklyHours.dailyHours.placeholder")}
+                placeholder={t("weeklyHours.dailyHours.placeholder")}
                 className="mt-2"
               />
             </div>
@@ -63,7 +63,7 @@ export default function CalculatorForm() {
                 type="number"
                 value={formData.workDaysPerWeek}
                 onChange={(e) => updateFormData("workDaysPerWeek", e.target.value)}
-                placeholder={t(".weeklyHours.workDaysPerWeek.placeholder")}
+                placeholder={t("weeklyHours.workDaysPerWeek.placeholder")}
                 className="mt-2"
               />
             </div>
