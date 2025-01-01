@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 import LanguageSelector from "./LanguageSelector";
-import { Link } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

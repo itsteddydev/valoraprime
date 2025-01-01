@@ -37,13 +37,12 @@ const Layout = () => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-6 items-center">
+          {/* <nav className="hidden md:flex gap-6 items-center">
             <NavLink to="/" className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold">
               Home
             </NavLink>
-            {/* Language Selector */}
             <LanguageSelector />
-          </nav>
+          </nav> */}
 
           {/* Hamburger Menu */}
           {/* <button

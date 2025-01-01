@@ -1,0 +1,13 @@
+{
+  "title": "Preguntas frecuentes",
+  "faqData": [
+    {
+      "question": "¿Cómo funciona Valora Prime?",
+      "answer": "Valora Prime te ayuda a calcular tus tarifas por hora y mensuales en función de tus objetivos y disponibilidad de tiempo."
+    },
+    {
+      "question": "¿La aplicación es gratuita?",
+      "answer": "Sí, puedes comenzar a usar Valora Prime de forma gratuita con funciones esenciales."
+    }
+  ]
+}

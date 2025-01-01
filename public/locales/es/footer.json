@@ -1,0 +1,33 @@
+{
+  "title": "Valora Prime",
+  "subtitle": "Una herramienta esencial para evaluar y organizar tus finanzas con precisión.",
+  "buildWith": "Construido con ❤️ por",
+  "creator": "justcoddev",
+  "footerLinks": [
+    {
+      "id": 1,
+      "name": "Sobre nosotros",
+      "link": "/about"
+    },
+    {
+      "id": 2,
+      "name": "Privacidad",
+      "link": "/privacy"
+    },
+    {
+      "id": 3,
+      "name": "Términos",
+      "link": "/terms"
+    },
+    {
+      "id": 4,
+      "name": "Blog",
+      "link": "/blog"
+    },
+    {
+      "id": 5,
+      "name": "Contacto",
+      "link": "/contact"
+    }
+  ]
+}

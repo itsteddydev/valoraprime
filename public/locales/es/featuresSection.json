@@ -1,0 +1,23 @@
+{
+  "title": "¿Por qué elegir Valora Prime?",
+  "featuresData": [
+    {
+      "icon": "📊",
+      "iconColor": "text-blue-600",
+      "title": "Cálculos precisos",
+      "description": "Ahorra tiempo con cálculos de tarifas precisos y automatizados."
+    },
+    {
+      "icon": "🛠️",
+      "iconColor": "text-green-600",
+      "title": "Control financiero",
+      "description": "Gestiona tus ingresos y establece precios justos sin esfuerzo."
+    },
+    {
+      "icon": "🌟",
+      "iconColor": "text-purple-600",
+      "title": "Hecho a tu medida",
+      "description": "Perfecto para freelancers, emprendedores y pequeñas empresas."
+    }
+  ]
+}

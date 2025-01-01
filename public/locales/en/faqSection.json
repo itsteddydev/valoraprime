@@ -1,0 +1,13 @@
+{
+  "title": "Frequently Asked Questions",
+  "faqData": [
+    {
+      "question": "How does Valora Prime work?",
+      "answer": "Valora Prime helps you calculate your hourly and monthly rates based on your goals and time availability."
+    },
+    {
+      "question": "Is the app free to use?",
+      "answer": "Yes, you can start using Valora Prime for free with essential features."
+    }
+  ]
+}

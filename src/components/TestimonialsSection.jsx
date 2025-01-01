@@ -1,19 +1,24 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
+import { Suspense } from "react";
 
 const TestimonialsSection = () => {
+  const { t, i18n } = useTranslation(["testimonialsSection"]);
+
   return (
-    <section id="testimonials" className="py-12 min-h-screen flex flex-col justify-center">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-        <div className="text-center">
-          <p className="text-gray-600 italic">"Valora Prime transformed how I set my rates. Now, I feel confident about my pricing!"</p>
-          <p className="mt-2 text-sm text-gray-500">- Alex, Freelance Designer</p>
+    <Suspense fallback="loading">
+      <section id="testimonials" className="space-y-8 min-h-screen flex flex-col justify-center">
+        <h2 className="text-2xl font-bold text-center text-gray-800">{t("title")}</h2>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+          {t("testimonialsData", { returnObjects: true }).map((testimonial, index) => (
+            <div key={index} className="text-center">
+              <p className="text-gray-600 italic">{testimonial.quote}</p>
+              <p className="mt-2 text-sm text-gray-500">- {testimonial.author}</p>
+            </div>
+          ))}
         </div>
-        <div className="text-center">
-          <p className="text-gray-600 italic">"A must-have for any freelancer. My finances have never been this organized."</p>
-          <p className="mt-2 text-sm text-gray-500">- Sam, Developer</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </Suspense>
   );
 };
 

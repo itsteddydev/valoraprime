@@ -1,0 +1,23 @@
+{
+  "title": "Why Choose Valora Prime?",
+  "featuresData": [
+    {
+      "icon": "📊",
+      "iconColor": "text-blue-600",
+      "title": "Accurate Calculations",
+      "description": "Save time with precise and automated rate calculations."
+    },
+    {
+      "icon": "🛠️",
+      "iconColor": "text-green-600",
+      "title": "Financial Control",
+      "description": "Manage your income and set fair prices effortlessly."
+    },
+    {
+      "icon": "🌟",
+      "iconColor": "text-purple-600",
+      "title": "Tailored for You",
+      "description": "Perfect for freelancers, entrepreneurs, and small businesses."
+    }
+  ]
+}
