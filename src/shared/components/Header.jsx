@@ -23,12 +23,14 @@ const Header = () => {
 
   const handleNavClick = (e, link) => {
     e.preventDefault();
-    const targetSection = document.querySelector(link);
+    const normalizedLink = link.startsWith("/") ? link.substring(1) : link; // Remueve el prefijo "/"
+    const targetSection = document.querySelector(normalizedLink);
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
-    setMenuOpen(false); // Cierra el menú al hacer clic
+    setMenuOpen(false);
   };
+
 
   return (
     <Suspense fallback="loading...">
