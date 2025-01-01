@@ -1,5 +1,6 @@
 import Footer from "@/shared/components/Footer";
 import Header from "@/shared/components/Header";
+import LanguageSelector from "@/shared/components/LanguageSelector";
 import React, { useEffect, useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
@@ -36,10 +37,12 @@ const Layout = () => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-6 items-center">
             <NavLink to="/" className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold">
               Home
             </NavLink>
+            {/* Language Selector */}
+            <LanguageSelector />
           </nav>
 
           {/* Hamburger Menu */}
