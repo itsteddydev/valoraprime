@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 870 668">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_23);
+        filter: url(#drop-shadow-1);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_23" data-name="Degradado sin nombre 23" x1="8.07" y1="327.24" x2="847.83" y2="327.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2562e9"/>
+      <stop offset=".22" stop-color="#2460e6"/>
+      <stop offset=".39" stop-color="#235adc"/>
+      <stop offset=".53" stop-color="#2151cc"/>
+      <stop offset=".66" stop-color="#1f45b7"/>
+    </linearGradient>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M813.93,425.29l-87.77-113.73-25.12-32.56-22.59-29.29-76.42-99.08-4.79-6.2L509.29,30.45l-15.43-20.02c-2.21-2.87-6.65-2.53-8.39,.65l-73.26,133.35-12.07,21.97-39.3,71.49-35.13,63.93c-1.75,3.18-6.18,3.52-8.39,.65L100.84,21.85c-2.21-2.87-6.65-2.53-8.39,.65L25.45,144.43l-3.15,5.76-13.6,24.77c-.96,1.75-.8,3.91,.43,5.49l13.18,17.08,87.95,114.02,9.72,12.58,71.67,92.92,41.33,53.55,6.34,8.27,101.82,131.97c2.21,2.87,6.65,2.53,8.39-.65l11.31-20.6,60.83-110.72,13.2-24,74.43-135.44h0c1.74-3.18,6.18-3.53,8.39-.65l94.31,122.28,22.93,29.71c2.55,3.31,.2,8.1-3.98,8.1h-116.62c-2.78,0-5.03,2.25-5.03,5.03v157.07c0,2.78,2.25,5.03,5.03,5.03h328.47c2.78,0,5.03-2.25,5.03-5.03v-169.99c0-1.11-.37-2.19-1.05-3.07l-32.85-42.62Z"/>
+</svg>
