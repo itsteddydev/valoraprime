@@ -124,7 +124,7 @@ const Header = () => {
                 <a
                   key={item.id}
                   href={item.link}
-                  onClick={(e) => handleNavClick(e, item.link)}
+                  // onClick={(e) => handleNavClick(e, item.link)}
                   className="text-gray-800 hover:text-black text-base font-medium"
                 >
                   {item.name}
@@ -142,28 +142,25 @@ const Header = () => {
 
 
         {/* Mobile Navigation  */}
-        {isPWAInstalled && (
-          <nav className="bg-white border-t border-gray-200 md:hidden fixed bottom-0 left-0 w-full z-10">
-            <div className="flex justify-around items-center py-2">
+        {/* {isPWAInstalled && ( */}
+        <nav className="bg-white border-t border-gray-200 md:hidden fixed bottom-0 left-0 w-full z-10">
+          <div className="flex justify-around items-center py-2">
+            {t("navItemsDesktop", { returnObjects: true }).map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                // onClick={(e) => handleNavClick(e, item.link)}
+                className="flex flex-col items-center text-gray-700 hover:text-black"
+              >
+                <span className="text-xl">{item.emoji}</span>
+                <span className="text-sm font-medium">{item.name}</span>
+              </a>
+            ))}
 
+          </div>
+        </nav>
 
-
-              {t("navItemsDesktop", { returnObjects: true }).map((item) => (
-                <a
-                  key={item.id}
-                  href={item.link}
-                  onClick={(e) => handleNavClick(e, item.link)}
-                  className="flex flex-col items-center text-gray-700 hover:text-black"
-                >
-                  <span className="text-xl">{item.emoji}</span>
-                  <span className="text-sm font-medium">{item.name}</span>
-                </a>
-              ))}
-
-            </div>
-          </nav>
-
-        )}
+        {/* )} */}
 
 
       </header>
