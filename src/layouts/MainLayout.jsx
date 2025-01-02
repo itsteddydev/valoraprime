@@ -11,7 +11,7 @@ const MainLayout = () => {
       <Header />
 
       {/* Main Content */}
-      <main className="pb-20 pt-16 md:pt-24 md:pb-16 overflow-y-auto">
+      <main className="pb-20 pt-16 md:pt-24 md:pb-0 overflow-y-auto">
         <div className="max-w-[1200px] mx-auto px-2">
           <Outlet />
         </div>

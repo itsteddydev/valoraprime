@@ -16,8 +16,8 @@ export default defineConfig({
     //   globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
     // },
     manifest: {
-      name: "ValoraPrime",
-      short_name: "ValoraPrime",
+      name: "Valora Prime",
+      short_name: "Valora Prime",
       description: "Tu herramienta fundamental para valorar y gestionar tus finanzas personales de manera profesional",
       start_url: "/",
       id: "/",

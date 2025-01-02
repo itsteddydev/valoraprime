@@ -25,18 +25,18 @@ export default function ResultsView({ results }) {
         <h2 className="text-xl font-bold mb-4">{t("title")}</h2>
 
         <div className="mb-4">
-          <p><strong>{t("monthlyExpenses")}:</strong> ${results.monthlyExpenses.toFixed(2)}</p>
-          <p><strong>{t("weeklyHours")}:</strong> {results.weeklyHours} hours</p>
+          <p><strong>{t("monthlyExpenses")}:</strong> <br className="sm:hidden" /> ${results.monthlyExpenses.toFixed(2)}</p>
+          <p><strong>{t("weeklyHours")}:</strong><br className="sm:hidden" />  {results.weeklyHours} hours</p>
         </div>
 
         <div className="mb-4">
-          <p><strong>{t("priceWithoutAdditional")}:</strong> ${results.priceWithoutAdditional.toFixed(2)}</p>
-          <p><strong>{t("finalPriceWithAdditional")}:</strong> ${results.finalPrice.toFixed(2)}</p>
+          <p><strong>{t("priceWithoutAdditional")}:</strong><br className="sm:hidden" />  ${results.priceWithoutAdditional.toFixed(2)}</p>
+          <p><strong>{t("finalPriceWithAdditional")}:</strong><br className="sm:hidden" />  ${results.finalPrice.toFixed(2)}</p>
         </div>
 
         <div className="mb-4">
-          <p><strong>{t("totalSalaryWithoutAdditional")}:</strong> ${results.totalSalaryWithoutAdditional.toFixed(2)}</p>
-          <p><strong>{t("totalSalaryWithAdditional")}:</strong> ${results.totalSalaryWithAdditional.toFixed(2)}</p>
+          <p><strong>{t("totalSalaryWithoutAdditional")}:</strong><br className="sm:hidden" />  ${results.totalSalaryWithoutAdditional.toFixed(2)}</p>
+          <p><strong>{t("totalSalaryWithAdditional")}:</strong><br className="sm:hidden" />  ${results.totalSalaryWithAdditional.toFixed(2)}</p>
         </div>
       </div>
     </Suspense>

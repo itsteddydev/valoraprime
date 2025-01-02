@@ -3,22 +3,26 @@
     {
       "id": 1,
       "name": "Home",
-      "link": "/#home"
+      "link": "/#home",
+      "emoji": "🏠"
     },
     {
       "id": 2,
       "name": "Features",
-      "link": "/#features"
+      "link": "/#features",
+      "emoji": "🚀"
     },
     {
       "id": 3,
       "name": "Testimonials",
-      "link": "/#testimonials"
+      "link": "/#testimonials",
+      "emoji": "👥"
     },
     {
       "id": 4,
       "name": "FAQ",
-      "link": "/#faq"
+      "link": "/#faq",
+      "emoji": "❓"
     }
   ]
 }

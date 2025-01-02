@@ -7,6 +7,7 @@ import LanguageSelector from "./LanguageSelector";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isPWAInstalled, setIsPWAInstalled] = useState(false);
   const { t, i18n } = useTranslation(["header"]);
 
   useEffect(() => {
@@ -19,6 +20,15 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const checkIfPWAInstalled = () => {
+      if (window.matchMedia("(display-mode: standalone)").matches) {
+        setIsPWAInstalled(true);
+      }
+    };
+    checkIfPWAInstalled();
   }, []);
 
   const handleNavClick = (e, link) => {
@@ -40,23 +50,35 @@ const Header = () => {
             }`}
         >
           {/* Logo */}
-          <NavLink to="/" className="text-xl font-bold text-gray-800 hover:text-black">
-            Valora Prime
-          </NavLink>
+          <div className="flex items-center gap-2">
+            <NavLink to="/" className="text-xl font-bold text-gray-800 hover:text-black">
+              <img src="/vo-1.svg" alt="Valora Prime" className="size-8" />
+            </NavLink>
+            <NavLink to="/" className="text-xl font-bold text-gray-800 hover:text-black">
+              Valora Prime
+            </NavLink>
+          </div>
+          {isPWAInstalled && (
+            <nav className="md:hidden">
+              <LanguageSelector />
+            </nav>
+          )}
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-6 items-center">
+          {!isPWAInstalled && (
+            <>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex gap-6 items-center">
 
-            {t("navItemsDesktop", { returnObjects: true }).map((item) => (
-              <a
-                key={item.id}
-                href={item.link}
-                className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold"
-              >
-                {item.name}
-              </a>
-            ))}
-            {/* {navItemsDesktop.map((item) => (
+                {t("navItemsDesktop", { returnObjects: true }).map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.link}
+                    className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+                {/* {navItemsDesktop.map((item) => (
               <a
                 key={item.id}
                 href={item.link}
@@ -66,34 +88,36 @@ const Header = () => {
               </a>
 
             ))} */}
-            {/* Language Selector */}
-            <LanguageSelector />
-          </nav>
+                {/* Language Selector */}
+                <LanguageSelector />
+              </nav>
 
-          {/* Hamburger Menu */}
-          <button
-            className="md:hidden flex items-center text-gray-800 focus:outline-none"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              />
-            </svg>
-          </button>
+              {/* Hamburger Menu */}
+              <button
+                className="md:hidden flex items-center text-gray-800 focus:outline-none"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  />
+                </svg>
+              </button>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu */}
-        {menuOpen && (
+        {menuOpen && !isPWAInstalled && (
           <div className="md:hidden bg-white shadow-md">
             <nav className="flex flex-col items-center gap-4 py-4">
               {t("navItemsDesktop", { returnObjects: true }).map((item) => (
@@ -115,23 +139,33 @@ const Header = () => {
           </div>
         )}
 
-        {/* Mobile Menu */}
-        {/* {menuOpen && (
-          <div className="md:hidden bg-white shadow-md">
-            <nav className="flex flex-col items-center gap-4 py-4">
-              {navItemsDesktop.map((item) => (
+
+
+        {/* Mobile Navigation  */}
+        {isPWAInstalled && (
+          <nav className="bg-white border-t border-gray-200 md:hidden fixed bottom-0 left-0 w-full z-10">
+            <div className="flex justify-around items-center py-2">
+
+
+
+              {t("navItemsDesktop", { returnObjects: true }).map((item) => (
                 <a
                   key={item.id}
                   href={item.link}
                   onClick={(e) => handleNavClick(e, item.link)}
-                  className="text-gray-800 hover:text-black text-base font-medium"
+                  className="flex flex-col items-center text-gray-700 hover:text-black"
                 >
-                  {item.name}
+                  <span className="text-xl">{item.emoji}</span>
+                  <span className="text-sm font-medium">{item.name}</span>
                 </a>
               ))}
-            </nav>
-          </div>
-        )} */}
+
+            </div>
+          </nav>
+
+        )}
+
+
       </header>
     </Suspense>
   );

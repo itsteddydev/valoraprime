@@ -22,10 +22,37 @@ export default function CalculatorForm() {
 
   const [expenseName, setExpenseName] = useState("");
   const [expenseAmount, setExpenseAmount] = useState("");
+  const [showResults, setShowResults] = useState(false);
+
+  const handleCalculate = () => {
+    calculate();
+    setShowResults(true); // Muestra ResultsView después de calcular
+  };
+
+  const handleClear = () => {
+    // Limpia el localStorage
+    localStorage.removeItem("calculatorFormData");
+    localStorage.removeItem("calculationResults");
+
+    // Reinicia los estados locales
+    updateFormData("salary", "");
+    updateFormData("dailyHours", "");
+    updateFormData("workDaysPerWeek", "");
+    updateFormData("weeksWorked", "");
+    updateFormData("expenses", []); // Limpia los gastos
+    updateFormData("additionalPercentage", "");
+
+    setExpenseName("");
+    setExpenseAmount("");
+
+    // Oculta ResultsView
+    setShowResults(false);
+  };
+
 
   return (
     <Suspense fallback="loading...">
-      <Card className="p-6 max-w-2xl mx-auto">
+      <Card className="p-6 max-w-2xl mx-auto mb-6 shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">{t("title")}</CardTitle>
         </CardHeader>
@@ -47,7 +74,7 @@ export default function CalculatorForm() {
 
           {/* Weekly Hours Inputs */}
           <div className="mb-4 grid grid-cols-3 gap-4">
-            <div>
+            <div className="col-span-3 md:col-span-1">
               <Label className="font-medium">{t("weeklyHours.dailyHours.label")}</Label>
               <Input
                 type="number"
@@ -57,7 +84,7 @@ export default function CalculatorForm() {
                 className="mt-2"
               />
             </div>
-            <div>
+            <div className="col-span-3 md:col-span-1">
               <Label className="font-medium">{t("weeklyHours.workDaysPerWeek.label")}</Label>
               <Input
                 type="number"
@@ -67,7 +94,7 @@ export default function CalculatorForm() {
                 className="mt-2"
               />
             </div>
-            <div>
+            <div className="col-span-3 md:col-span-1">
               <Label className="font-medium">{t("weeklyHours.weeksWorked.label")}</Label>
               <Input
                 type="number"
@@ -82,7 +109,8 @@ export default function CalculatorForm() {
           {/* Expense Inputs */}
           <div className="mb-4">
             <Label className="font-medium">{t("expenses.label")}</Label>
-            <div className="flex gap-2 mt-2">
+            <div className="flex flex-col md:flex-row
+             gap-2 mt-2">
               <Input
                 type="text"
                 placeholder={t("expenses.namePlaceholder")}
@@ -90,13 +118,15 @@ export default function CalculatorForm() {
                 onChange={(e) => setExpenseName(e.target.value)}
                 className="flex-grow"
               />
-              <Input
-                type="number"
-                placeholder={t("expenses.amountPlaceholder")}
-                value={expenseAmount}
-                onChange={(e) => setExpenseAmount(e.target.value)}
-                className="w-32"
-              />
+              <div className="flex justify-end">
+                <Input
+                  type="number"
+                  placeholder={t("expenses.amountPlaceholder")}
+                  value={expenseAmount}
+                  onChange={(e) => setExpenseAmount(e.target.value)}
+                  className="w-32"
+                />
+              </div>
               <Button
                 onClick={() => {
                   addExpense(expenseName, expenseAmount);
@@ -138,23 +168,17 @@ export default function CalculatorForm() {
             />
           </div>
 
-          {/* Calculate Button */}
-          <Button className="w-full" onClick={calculate}>
+          {/* Botón para calcular */}
+          <Button className="w-full" onClick={handleCalculate}>
             {t("buttons.calculate")}
           </Button>
-          <Button
-            variant="secondary"
-            className="w-full mt-4"
-            onClick={() => {
-              localStorage.removeItem("calculationResults"); // Borrar resultados guardados
-              window.location.reload(); // Recargar para reiniciar el estado
-            }}
-          >
+          {/* Botón para limpiar */}
+          <Button variant="secondary" className="w-full mt-4" onClick={handleClear}>
             {t("buttons.clearResults")}
           </Button>
 
-          {/* Results */}
-          <ResultsView results={results} error={t("resultError")} />
+          {/* ResultsView controlado por showResults */}
+          {showResults && <ResultsView results={results} error={t("resultError")} />}
         </CardContent>
       </Card>
     </Suspense>

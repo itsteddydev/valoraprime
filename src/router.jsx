@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/calculateprice",
-    element: <Layout />,
+    element: <MainLayout />,
     children: [
       {
         index: true,

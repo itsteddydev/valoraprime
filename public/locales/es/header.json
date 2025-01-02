@@ -3,22 +3,26 @@
     {
       "id": 1,
       "name": "Inicio",
-      "link": "/#home"
+      "link": "/#home",
+      "emoji": "🏠"
     },
     {
       "id": 2,
       "name": "Características",
-      "link": "/#features"
+      "link": "/#features",
+      "emoji": "🚀"
     },
     {
       "id": 3,
       "name": "Testimonios",
-      "link": "/#testimonials"
+      "link": "/#testimonials",
+      "emoji": "👥"
     },
     {
       "id": 4,
-      "name": "Preguntas Frecuentes",
-      "link": "/#faq"
+      "name": "Preguntas",
+      "link": "/#faq",
+      "emoji": "❓"
     }
   ]
 }

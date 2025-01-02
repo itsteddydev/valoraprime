@@ -45,7 +45,7 @@ const Footer = () => {
       </footer> */}
 
       {/* Footer for Desktop */}
-      <footer className="py-12 min-h-screen flex flex-col justify-center bg-white border-t border-gray-200">
+      <footer className="pb-12 min-h-screen flex flex-col justify-center bg-white border-t drop-shadow-2xl border-gray-200">
         <div className="max-w-[1200px] mx-auto text-center px-4">
           {/* Título */}
           <h2 className="text-xl font-semibold text-gray-800 mb-2">{t("title")}</h2>
