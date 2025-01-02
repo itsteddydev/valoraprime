@@ -4,9 +4,9 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
-			// fontFamily: {
-			// 	sans: ['Roboto', 'sans-serif'], // Reemplaza 'sans' o añade un nuevo nombre
-			// },
+			fontFamily: {
+				sans: ['Roboto', 'sans-serif'], // Reemplaza 'sans' o añade un nuevo nombre
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
