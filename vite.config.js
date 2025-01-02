@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), VitePWA({
     registerType: 'autoUpdate',
     devOptions: {
-      enabled: true
+      enabled: false
     },
     injectRegister: 'auto',
     includeAssets: ['public/windows11', 'public/android', 'public/ios'],
