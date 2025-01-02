@@ -51,10 +51,10 @@ const Header = () => {
         >
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <NavLink to="/" className="text-xl font-bold text-gray-800 hover:text-black">
+            <NavLink to="/#home" className="text-xl font-bold text-gray-800 hover:text-black">
               <img src="/vo-1.svg" alt="Valora Prime" className="size-8" />
             </NavLink>
-            <NavLink to="/" className="text-xl font-bold text-gray-800 hover:text-black">
+            <NavLink to="/#home" className="text-xl font-bold text-gray-800 hover:text-black">
               Valora Prime
             </NavLink>
           </div>
@@ -125,6 +125,7 @@ const Header = () => {
                   key={item.id}
                   href={item.link}
                   // onClick={(e) => handleNavClick(e, item.link)}
+                  onClick={() => setMenuOpen(false)} // Cierra el menú al hacer clic
                   className="text-gray-800 hover:text-black text-base font-medium"
                 >
                   {item.name}
