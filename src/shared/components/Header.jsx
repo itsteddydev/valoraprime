@@ -96,6 +96,7 @@ const Header = () => {
               <button
                 className="md:hidden flex items-center text-gray-800 focus:outline-none"
                 onClick={() => setMenuOpen(!menuOpen)}
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
               >
                 <svg
                   className="w-6 h-6"

@@ -6,7 +6,13 @@ import router from './router';
 import './index.css';
 import './config/i18next.config';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    mutations: {
+      networkMode: "offlineFirst",
+    },
+  },
+});
 
 
 createRoot(document.getElementById('root')).render(
