@@ -73,7 +73,7 @@ const Footer = () => {
               href="https://github.com/justcoddev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-800 hover:text-blue-900"  // Cambio de color y añadido subrayado
+              className="underline underline-offset-2 hover:text-primary ml-1"
               aria-label="Visit the creator's GitHub page"
             >
               {t("creator")}
