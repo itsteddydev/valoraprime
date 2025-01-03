@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
     <Suspense fallback="loading">
       <section id="testimonials" className="space-y-8 min-h-screen flex flex-col justify-center">
         <h2 className="text-2xl font-bold text-center text-gray-800">{t("title")}</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t("testimonialsData", { returnObjects: true }).map((testimonial, index) => (
             <div key={index} className="text-center">
               <p className="text-gray-600 italic">{testimonial.quote}</p>
