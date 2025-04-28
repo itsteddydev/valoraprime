@@ -1,38 +1,31 @@
 {
   "title": "Price Calculator",
   "error": "An error occurred while processing the data.",
-  "salary": {
-    "label": "Basic Salary",
-    "placeholder": "Enter your basic salary"
-  },
-  "weeklyHours": {
+  "calculateHours": {
     "dailyHours": {
       "label": "Daily Hours",
       "placeholder": "e.g., 8"
     },
     "workDaysPerWeek": {
-      "label": "Work Days Per Week",
+      "label": "Work Days per Week",
       "placeholder": "e.g., 5"
     },
-    "weeksWorked": {
-      "label": "Weeks Worked",
-      "placeholder": "e.g., 4"
-    }
-  },
-  "expenses": {
-    "label": "Expenses",
-    "namePlaceholder": "Expense name (e.g., Rent)",
-    "amountPlaceholder": "Amount",
-    "addButton": "Add",
-    "deleteButton": "Remove"
-  },
-  "additionalPercentage": {
-    "label": "Additional Percentage",
-    "placeholder": "e.g., 25"
+    "titlevalue": "Enter the value"
   },
   "buttons": {
     "calculate": "Calculate",
-    "clearResults": "Clear Results"
+    "clearResults": "Clear All Results"
   },
-  "resultError": "No results to show."
+  "resultError": "No results to display.",
+  "hourxdays": {
+    "hour": "hours per",
+    "days": "days"
+  },
+  "cards": {
+    "perhour": "per hour",
+    "perdays": "per day",
+    "perweek": "per week",
+    "permonth": "per month",
+    "peryear": "per year"
+  }
 }

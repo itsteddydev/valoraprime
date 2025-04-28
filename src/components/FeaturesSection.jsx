@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 
 const FeaturesSection = () => {
-  const { t, i18n } = useTranslation(["featuresSection"]);
+  const { t } = useTranslation(["featuresSection"]);
   return (
     <Suspense fallback="loading...">
       <section id="features" className=" max-w-[1200px] px-2 mx-auto space-y-8 min-h-screen flex flex-col justify-center">

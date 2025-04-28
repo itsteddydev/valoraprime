@@ -1,4 +1,4 @@
-import React from "react";
+
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
@@ -21,7 +21,7 @@ const navItemsMobile = [
 // ];
 
 const Footer = () => {
-  const { t, i18n } = useTranslation(["footer"]);
+  const { t } = useTranslation(["footer"]);
   return (
     <Suspense fallback="loading">
 
@@ -70,7 +70,7 @@ const Footer = () => {
           <p className="text-gray-500 text-xs">
             © {new Date().getFullYear()} Valora Prime. {t("buildWith")}{" "}
             <a
-              href="https://github.com/justcoddev"
+              href="https://github.com/itsteddydev"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-2 hover:text-primary ml-1"

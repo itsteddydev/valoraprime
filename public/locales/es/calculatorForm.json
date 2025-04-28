@@ -1,11 +1,7 @@
 {
   "title": "Calculadora de Precios",
   "error": "Ocurrió un error al procesar los datos.",
-  "salary": {
-    "label": "Salario Básico",
-    "placeholder": "Ingrese su salario básico"
-  },
-  "weeklyHours": {
+  "calculateHours": {
     "dailyHours": {
       "label": "Horas Diarias",
       "placeholder": "p. ej., 8"
@@ -14,25 +10,22 @@
       "label": "Días Laborales por Semana",
       "placeholder": "p. ej., 5"
     },
-    "weeksWorked": {
-      "label": "Semanas Trabajadas",
-      "placeholder": "p. ej., 4"
-    }
-  },
-  "expenses": {
-    "label": "Gastos",
-    "namePlaceholder": "Nombre del gasto (p. ej., Alquiler)",
-    "amountPlaceholder": "Cantidad",
-    "addButton": "Agregar",
-    "deleteButton": "Eliminar"
-  },
-  "additionalPercentage": {
-    "label": "Porcentaje Adicional",
-    "placeholder": "p. ej., 25"
+    "titlevalue": "Ingrese el valor"
   },
   "buttons": {
     "calculate": "Calcular",
-    "clearResults": "Borrar Resultados"
+    "clearResults": "Borrar todos los Resultados"
   },
-  "resultError": "No hay resultados para mostrar."
+  "resultError": "No hay resultados para mostrar.",
+  "hourxdays": {
+    "hour": "horas por",
+    "days": "días"
+  },
+  "cards": {
+    "perhour": "por hora",
+    "perdays": "por día",
+    "perweek": "por semana",
+    "permonth": "por mes",
+    "peryear": "por año"
+  }
 }

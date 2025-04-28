@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 
 const TestimonialsSection = () => {
-  const { t, i18n } = useTranslation(["testimonialsSection"]);
+  const { t } = useTranslation(["testimonialsSection"]);
 
   return (
     <Suspense fallback="loading">

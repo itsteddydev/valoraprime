@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 
 const HeroSection = () => {
-  const { t, i18n } = useTranslation(["heroSection"]);
+  const { t } = useTranslation(["heroSection"]);
   return (
     <Suspense fallback="loading...">
 
@@ -16,7 +16,7 @@ const HeroSection = () => {
           <p className="text-xs text-gray-500">
             {t("create")}{" "}
             <a
-              href="https://www.instagram.com/justcoddev/"
+              href="https://www.instagram.com/itsteddydev/"
               className="underline underline-offset-2 hover:text-primary ml-1"
               target='_blank'
             >
