@@ -46,39 +46,42 @@ const Header = () => {
     <Suspense fallback="loading...">
       <header className="fixed top-0 w-full z-10 bg-white">
         <div
-          className={`max-w-[1200px] mx-auto rounded-b-lg px-6 md:py-6 py-4 flex justify-between items-center transition-shadow ${scrolled ? "shadow-md" : ""
+          className={`transition-shadow ${scrolled ? "shadow-md" : ""
             }`}
         >
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <NavLink to="/#home" className="text-xl font-bold text-gray-800 hover:text-black">
-              <img src="/vo-1.svg" alt="Valora Prime" className="size-8" />
-            </NavLink>
-            <NavLink to="/#home" className="text-xl font-bold text-gray-800 hover:text-black">
-              Valora Prime
-            </NavLink>
-          </div>
-          {isPWAInstalled && (
-            <nav className="md:hidden">
-              <LanguageSelector />
-            </nav>
-          )}
+          <div className="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center">
 
-          {!isPWAInstalled && (
-            <>
-              {/* Desktop Navigation */}
-              <nav className="hidden md:flex gap-6 items-center">
 
-                {t("navItemsDesktop", { returnObjects: true }).map((item) => (
-                  <a
-                    key={item.id}
-                    href={item.link}
-                    className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-                {/* {navItemsDesktop.map((item) => (
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <NavLink to="/#home" className="text-xl font-bold text-gray-800 hover:text-black">
+                <img src="/vo-1.svg" alt="Valora Prime" className="size-8" />
+              </NavLink>
+              <NavLink to="/#home" className="text-xl font-bold text-gray-800 hover:text-black">
+                Valora Prime
+              </NavLink>
+            </div>
+            {isPWAInstalled && (
+              <nav className="md:hidden">
+                <LanguageSelector />
+              </nav>
+            )}
+
+            {!isPWAInstalled && (
+              <>
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex gap-6 items-center">
+
+                  {t("navItemsDesktop", { returnObjects: true }).map((item) => (
+                    <a
+                      key={item.id}
+                      href={item.link}
+                      className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                  {/* {navItemsDesktop.map((item) => (
               <a
                 key={item.id}
                 href={item.link}
@@ -88,35 +91,36 @@ const Header = () => {
               </a>
 
             ))} */}
-                {/* Language Selector */}
-                <LanguageSelector />
-              </nav>
+                  {/* Language Selector */}
+                  <LanguageSelector />
+                </nav>
 
-              {/* Hamburger Menu */}
-              <button
-                className="md:hidden flex items-center text-gray-800 focus:outline-none"
-                onClick={() => setMenuOpen(!menuOpen)}
-                aria-label={menuOpen ? "Close menu" : "Open menu"}
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                {/* Hamburger Menu */}
+                <button
+                  className="md:hidden flex items-center text-gray-800 focus:outline-none"
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  aria-label={menuOpen ? "Close menu" : "Open menu"}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-                  />
-                </svg>
-              </button>
-            </>
-          )}
-        </div>
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                    />
+                  </svg>
+                </button>
+              </>
+            )}
 
+          </div>
+        </div>
         {/* Mobile Menu */}
         {menuOpen && !isPWAInstalled && (
           <div className="md:hidden bg-white shadow-md">

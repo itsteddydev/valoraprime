@@ -7,7 +7,8 @@ import Layout from "./layouts/Layout";
 
 
 
-const NotImplementedYet = () => <h1>Not implemented yet</h1>;
+
+// const NotImplementedYet = () => <h1>Not implemented yet</h1>;
 
 const router = createBrowserRouter([
   {
@@ -18,15 +19,15 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: "/calculateprice",
-        element: <CalculatorForm />,
-      },
+      // {
+      //   path: "/calculateprice",
+      //   element: <CalculatorForm />,
+      // },
     ]
   },
   {
     path: "/calculateprice",
-    element: <MainLayout />,
+    element: <Layout />,
     children: [
       {
         index: true,

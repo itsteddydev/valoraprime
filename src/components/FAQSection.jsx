@@ -6,7 +6,7 @@ const FAQSection = () => {
   const { t, i18n } = useTranslation(["faqSection"]);
   return (
     <Suspense fallback="loading">
-      <section id="faq" className="space-y-8 min-h-screen flex flex-col justify-center">
+      <section id="faq" className="max-w-[1200px] px-2 mx-auto  space-y-8 min-h-screen flex flex-col justify-center">
         <h2 className="text-2xl font-bold text-center text-gray-800">{t("title")}</h2>
         <div className="mt-8 space-y-6">
           {t("faqData", { returnObjects: true }).map((faq, index) => (

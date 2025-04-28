@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 
 const NotFound = () => {
-  const { t, i18n } = useTranslation(["notFound"]);
+  const { t } = useTranslation(["notFound"]);
   const navigate = useNavigate();
 
   // const texts = {

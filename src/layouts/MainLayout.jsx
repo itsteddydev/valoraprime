@@ -1,6 +1,5 @@
 import Footer from "@/shared/components/Footer";
 import Header from "@/shared/components/Header";
-import React from "react";
 import { Outlet } from "react-router-dom";
 
 
@@ -11,8 +10,8 @@ const MainLayout = () => {
       <Header />
 
       {/* Main Content */}
-      <main className=" pt-16 md:pt-24 md:pb-0 overflow-y-auto">
-        <div className="max-w-[1200px] mx-auto px-2">
+      <main className=" pt-16  md:pb-0 overflow-y-auto bg-white ">
+        <div className=" mx-auto ">
           <Outlet />
         </div>
       </main>
