@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
 
   return (
-    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+    <section id="calculateprice" className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       {/* Header */}
       <Header />
 
@@ -23,7 +23,7 @@ const Layout = () => {
           <span className="text-sm">ValoraPrime © 2025. All rights reserved.</span>
         </div>
       </footer>
-    </div>
+    </section>
   );
 };
 

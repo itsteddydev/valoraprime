@@ -24,13 +24,5 @@
       "link": "/#faq",
       "emoji": "❓"
     }
-  ],
-  "navCalculate": [
-    {
-      "id": 5,
-      "name": "Home",
-      "link": "/#calculateprice",
-      "emoji": "🏠"
-    }
   ]
 }
