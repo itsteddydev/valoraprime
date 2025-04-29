@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
@@ -8,7 +8,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isPWAInstalled, setIsPWAInstalled] = useState(false);
-  const { t, i18n } = useTranslation(["header"]);
+  const { t } = useTranslation(["header"]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,15 +31,15 @@ const Header = () => {
     checkIfPWAInstalled();
   }, []);
 
-  const handleNavClick = (e, link) => {
-    e.preventDefault();
-    const normalizedLink = link.startsWith("/") ? link.substring(1) : link; // Remueve el prefijo "/"
-    const targetSection = document.querySelector(normalizedLink);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setMenuOpen(false);
-  };
+  // const handleNavClick = (e, link) => {
+  //   e.preventDefault();
+  //   const normalizedLink = link.startsWith("/") ? link.substring(1) : link; // Remueve el prefijo "/"
+  //   const targetSection = document.querySelector(normalizedLink);
+  //   if (targetSection) {
+  //     targetSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   setMenuOpen(false);
+  // };
 
 
   return (

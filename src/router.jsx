@@ -19,23 +19,23 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      // {
-      //   path: "/calculateprice",
-      //   element: <CalculatorForm />,
-      // },
-    ]
-  },
-  {
-    path: "/calculateprice",
-    element: <Layout />,
-    children: [
       {
-        index: true,
+        path: "/calculateprice",
         element: <CalculatorForm />,
       },
-
     ]
   },
+  // {
+  //   path: "/calculateprice",
+  //   element: <Layout />,
+  //   children: [
+  //     {
+  //       index: true,
+  //       element: <CalculatorForm />,
+  //     },
+
+  //   ]
+  // },
   {
     path: "not-found",
     element: <NotFound />,

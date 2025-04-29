@@ -39,10 +39,19 @@ const HeroSection = () => {
         </p>
 
         <div className="flex justify-center">
+          {/* {t("navItemsDesktop", { returnObjects: true }).map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className="hover:text-black text-sm font-medium text-zinc-800 hover:underline hover:font-semibold"
+            >
+              {item.name}
+            </a>
+          ))} */}
           <NavLink
             // href="/calculateprice"
             // target="_self"
-            to="/calculateprice"
+            to={t("link")}
             className="inline-flex items-center justify-center rounded-lg text-base font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:pointer-events-none disabled:bg-gray-300 disabled:text-gray-400 disabled:opacity-50 shadow-lg h-12 px-6 w-full max-w-sm bg-gradient-to-r from-blue-600 to-blue-800 text-white hover:from-blue-500 hover:to-blue-700"
           >
             {t("cta")}
