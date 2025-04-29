@@ -76,11 +76,11 @@ const CalculatorForm = () => {
       <div className="md:flex-row flex md:flex-1 flex-col w-full p-5 gap-2 overflow-hidden ">
 
         {/* Formulario */}
-        <div className="flex-1 border-2 border-[#2f6dac] rounded-s-xl pl-6 shadow-md md:max-h-[75vh] max-h-[72vh] sm:overflow-y-auto">
-          <div className="bg-white py-6 overflow-y-auto h-full">
+        <div className="flex-1 border-2 border-[#2f6dac] rounded-s-xl sm:pl-6 px-2 shadow-md md:max-h-[75vh]  max-h-[90vh] sm:overflow-y-auto">
+          <div className=" py-6 overflow-y-auto h-full">
             <h2 className=" mb-6 text-center text-2xl font-extrabold leading-tight text-gray-800 sm:text-3xl md:text-4xl lg:text-5xl">  {t("title")}</h2>
 
-            <div className="flex justify-center gap-2 mb-6 text-base text-gray-600">
+            <div className="flex justify-center gap-2 flex-wrap md:flex-nowrap mb-6 text-base text-gray-600">
               {['hora', 'dia', 'mes', 'anual'].map((option) => (
                 <button
                   key={option}
@@ -92,9 +92,9 @@ const CalculatorForm = () => {
               ))}
             </div>
 
-            <div className="flex md:flex-col gap-3 justify-center items-center">
+            <div className="flex flex-col  md:gap-3 justify-center items-center">
               {/* Inputs de configuración */}
-              <div className="flex flex-col justify-center items-start gap-4 md:mb-6">
+              <div className="flex flex-col justify-center items-start gap-4 mb-6">
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-semibold text-gray-600"> {t("calculateHours.dailyHours.label")}</label>
                   <input
@@ -121,7 +121,7 @@ const CalculatorForm = () => {
               </div>
 
               {/* Input de dinero */}
-              <div className="flex flex-col md:gap-4 md:items-center">
+              <div className="flex flex-col gap-2 md:items-center">
                 <label className="font-semibold text-sm text-gray-600">{t("calculateHours.titlevalue")}</label>
                 <input
                   type="number"

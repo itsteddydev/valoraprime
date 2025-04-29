@@ -40,10 +40,10 @@ const router = createBrowserRouter([
     path: "not-found",
     element: <NotFound />,
   },
-  {
-    path: "/calculateprice",
-    element: <CalculatorForm />,
-  },
+  // {
+  //   path: "/calculateprice",
+  //   element: <CalculatorForm />,
+  // },
   {
     path: "*",
     element: <Navigate to="/not-found" replace />,
