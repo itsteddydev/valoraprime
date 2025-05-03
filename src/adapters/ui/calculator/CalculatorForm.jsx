@@ -157,25 +157,26 @@ const CalculatorForm = () => {
             )}
 
             {results.length === 0 && (
-              <p className="text-center text-gray-500">   {t("resultError")}</p>
+              <p className="text-center ">   {t("resultError")}</p>
             )}
             {results.map((res) => (
-              <div key={res.id} className="bg-pink-200 p-4 rounded-lg mb-4 relative">
+              <div key={res.id} className="bg-gradient-to-r from-blue-600 to-blue-800
+               p-4 rounded-lg mb-4 relative">
                 <button
                   onClick={() => handleRemove(res.id)}
-                  className="absolute top-2 right-2 text-sm text-gray-600 hover:text-black"
+                  className="absolute top-2 right-2 text-sm text-white/80 hover:text-white"
                 >
                   <Trash2 className='size-5' />
                 </button>
-                <ul className="text-sm space-y-1">
-                  <small className="block text-gray-500 mb-2">
+                <ul className="text-sm space-y-1 text-white">
+                  <small className="block mb-2">
                     {res.hours}  {t("hourxdays.hour")} {res.days}  {t("hourxdays.days")}
                   </small>
-                  <li><strong> {t("cards.perhour")}</strong> ${res.hourlyRate}</li>
-                  <li><strong>{t("cards.perdays")}</strong> ${res.dailyRate}</li>
-                  <li><strong>{t("cards.perweek")}</strong> ${res.weeklyRate}</li>
-                  <li><strong>{t("cards.permonth")}</strong> ${res.monthlyRate}</li>
-                  <li><strong>{t("cards.peryear")}</strong> ${res.yearlyRate}</li>
+                  <li className='flex justify-between'><strong className='text-white/80' > {t("cards.perhour")}:</strong> ${res.hourlyRate}</li>
+                  <li className='flex justify-between'><strong className='text-white/80' >{t("cards.perdays")}:</strong> ${res.dailyRate}</li>
+                  <li className='flex justify-between'><strong className='text-white/80' >{t("cards.perweek")}:</strong> ${res.weeklyRate}</li>
+                  <li className='flex justify-between'><strong className='text-white/80' >{t("cards.permonth")}:</strong> ${res.monthlyRate}</li>
+                  <li className='flex justify-between'><strong className='text-white/80' >{t("cards.peryear")}:</strong> ${res.yearlyRate}</li>
                 </ul>
               </div>
             ))}
